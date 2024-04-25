@@ -26,6 +26,7 @@
 
    <plugins>
       <plugin id="de.rhe.rcptestprojekt"/>
+      <plugin id="de.rhe.rcptestprojekt.icons"/>
       <plugin id="org.eclipse.jface"/>
    </plugins>
 
