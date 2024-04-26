@@ -29,7 +29,7 @@
 
    <features>
       <feature id="org.eclipse.e4.rcp"/>
-      <feature id="de.testprojekt.feature"/>
+      <feature id="de.rhe.rcptestprojekt.feature"/>
    </features>
 
    <configurations>
