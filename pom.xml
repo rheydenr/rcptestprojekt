@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.rhe.rcptestprojekt</groupId>
-	<artifactId>de.rhe.rcptestprojekt</artifactId>
+	<artifactId>rcptestprojekt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -53,7 +53,8 @@
 					<!-- Optional set the Java version you are using-->
 					<executionEnvironment>JavaSE-17</executionEnvironment>
 					<target>
-						<file>../de.rhe.rcptestprojekt.target/de.rhe.rcptestprojekt.target</file>
+						<file>
+							../de.rhe.rcptestprojekt.target/de.rhe.rcptestprojekt.target</file>
 					</target>
 					<environments>
 						<environment>
@@ -74,38 +75,13 @@
 					</environments>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-p2-director-plugin</artifactId>
-				<configuration>
-					<formats>
-						<win32>zip</win32>
-					</formats>
-				</configuration>
-				<executions>
-					<execution>
-						<id>materialize-products</id>
-						<goals>
-							<goal>materialize-products</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>archive-products</id>
-						<goals>
-							<goal>archive-products</goal>
-						</goals>
-					</execution>
-				</executions> 
-			</plugin>
 
 		</plugins>
 	</build>
 
 	<modules>
-		<module>de.rhe.rcptestprojekt</module>
-		<module>de.rhe.rcptestprojekt.icons</module>
 		<module>de.rhe.rcptestprojekt.updatesite</module>
-		<!--<module>de.rhe.rcptestprojekt.target</module>-->
+		<module>de.rhe.rcptestprojekt.feature</module>
 	</modules>
 
 </project>

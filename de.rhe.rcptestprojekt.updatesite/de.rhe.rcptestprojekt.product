@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="de.rhe.rcptestprojekt" uid="de.rhe.rcptestprojekt.product" id="de.rhe.rcptestprojekt.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" type="mixed" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="de.rhe.rcptestprojekt" uid="de.rhe.rcptestprojekt.product" id="de.rhe.rcptestprojekt.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" type="features" includeLaunchers="true" autoIncludeRequirements="true">
 
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
-      <programArgs>-clearPersistedState
-      </programArgs>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      <vmArgs>-DREFRESH_BUNDLES=false -Dorg.eclipse.e4.ui.css.dynamic=true --add-modules=ALL-SYSTEM -Dslf4j.provider=logback
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Xdock:name=Fakturama -Xdock:icon=../Resources/app.icns
       </vmArgsMac>
    </launcherArgs>
 
    <windowImages/>
 
-   <launcher>
+   <launcher name="RheTest">
       <win useIco="false">
          <bmp/>
       </win>
@@ -25,14 +25,29 @@
    </vm>
 
    <plugins>
-      <plugin id="de.rhe.rcptestprojekt"/>
-      <plugin id="de.rhe.rcptestprojekt.icons"/>
-      <plugin id="org.eclipse.jface"/>
    </plugins>
 
    <features>
       <feature id="org.eclipse.e4.rcp"/>
+      <feature id="de.testprojekt.feature"/>
    </features>
 
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="1" />
+      <property name="eclipse.p2.data.area" value="@config.dir/../p2" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+      <property name="eclipse.p2.profile" value="profile" />
+      <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>

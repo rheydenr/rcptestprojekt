@@ -3,6 +3,6 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Rhetestprojekticons
 Bundle-SymbolicName: de.rhe.rcptestprojekt.icons
 Bundle-Version: 1.0.0.qualifier
-Fragment-Host: de.rhe.rcptestprojekt;bundle-version="1.0.0"
+Fragment-Host: de.rhe.rcptestprojekt.rcp;bundle-version="1.0.0.qualifier"
 Automatic-Module-Name: de.rhetestprojekticons
 Bundle-RequiredExecutionEnvironment: JavaSE-17

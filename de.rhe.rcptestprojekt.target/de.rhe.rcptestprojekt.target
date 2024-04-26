@@ -3,8 +3,6 @@
 <target name="Running Platform">
 	<environment>
 		<arch>x86_64</arch>
-		<os>win32</os>
-		<ws>win32</ws>
 		<nl>de_DE</nl>
 	</environment>
 	<launcherArgs>
@@ -13,11 +11,13 @@
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://download.eclipse.org/releases/latest"/>
-			<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.30.100.v20240211-0942"/>
+			<unit id="org.eclipse.equinox.executable.feature.group" version="3.8.2400.v20240213-1244"/>
+			<unit id="org.eclipse.e4.core.tools.feature.feature.group" version="4.30.100.v20240211-0942"/>
 			<unit id="org.eclipse.e4.rcp.feature.group" version="4.31.0.v20240227-1638"/>
-			<unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="1.4.2300.v20240220-1431"/>
-			<unit id="org.eclipse.e4.rcp.source.feature.group" version="4.31.0.v20240227-1638"/>
+			<unit id="org.eclipse.equinox.core.feature.feature.group" version="1.15.0.v20240214-0846"/>
+			<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.1100.v20240218-1855"/>
 			<unit id="org.eclipse.rcp.feature.group" version="4.31.0.v20240229-0520"/>
+			<unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="1.4.2300.v20240220-1431"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20230302014618/repository"/>
